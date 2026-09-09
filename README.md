@@ -14,7 +14,7 @@ Example Data:
 
 
 Questions:
-1. Which country has the longest life expectancy? 
+1. Which countries have the highest and lowest life expectancy?? 
 2. How has life expectancy changed over the years?
 3. Which countries have seen the biggest increase in life expectancy?
 
