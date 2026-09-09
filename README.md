@@ -18,3 +18,7 @@ Questions:
 2. How has life expectancy changed over the years?
 3. Which countries have seen the biggest increase in life expectancy?
 
+
+
+- Live: https://edwardcoded77.github.io/capstone/ 
+- Repo: https://github.com/edwardcoded77/capstone
