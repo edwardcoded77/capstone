@@ -5,10 +5,10 @@ Dataset: Global Life Expectancy
 
 Example Data:
 
-```text
-id,year,country,code,life_expectancy
+| id | year | country | code | life_expectancy |
+------------------------------------------------
 1,1980.0,Afghanistan,AFG,41.853001
-```
+
 
 
 
