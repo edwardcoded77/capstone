@@ -3,12 +3,11 @@
 Dataset: Global Life Expectancy
 
 
-Example Data:
+**Example Data:**
 
 | id | year | country | code | life_expectancy |
-------------------------------------------------
-| 1  | 1980 | Afghanistan| AFG| 41|
-
+|---|---|---|---|---|
+| 1 | 1980 | Afghanistan | AFG | 41.853001 |
 
 
 
