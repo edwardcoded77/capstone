@@ -8,7 +8,6 @@ Dataset: Global Life Expectancy
 | id | year | country | code | life_expectancy |
 |---|---|---|---|---|
 | 1 | 1980 | Afghanistan | AFG | 41 |
-|---|---|---|---|---|
 | 2 | 1981 | Afghanistan | AFG | 42 |
 
 
