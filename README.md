@@ -7,7 +7,7 @@ Example Data:
 
 | id | year | country | code | life_expectancy |
 ------------------------------------------------
-1,1980.0,Afghanistan,AFG,41.853001
+| 1  | 1980 | Afghanistan| AFG| 41|
 
 
 
