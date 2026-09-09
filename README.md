@@ -3,7 +3,7 @@
 Dataset: Global Life Expectancy
 
 
-**Example Data:**
+Example Data:
 
 ```text
 id,year,country,code,life_expectancy
