@@ -20,5 +20,9 @@ Questions:
 
 
 
+## The problem:
+   Someone curious about how long people live in different countries needs a simple way to find life expectancy information because they may want to see how countries compare and how things have changed over the years. My page will let them search for a country and see its life expectancy by year. Smallest: one country search, results on the page.
+   
+
 - Live: https://edwardcoded77.github.io/capstone/ 
 - Repo: https://github.com/edwardcoded77/capstone
