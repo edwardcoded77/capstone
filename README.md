@@ -1,8 +1,28 @@
 # Global Life Expectancy
-
+Cloudflare deployment test.
 
 ## The problem:
- Someone interested in life expectancy needs an easy way to find information about different countries because they want to see how long people live around the world. My page will let them search for a country and view its life expectancy data by year.
+ A public health researcher or curious person needs an easy way to find life expectancy data for different countries and years because they want to understand how health and longevity differ around the world. My page will let them search for a country and view its life expectancy data by year.
+
+
+## The plan
+
+![My wireframe](wireframe.png)
+
+### Sections
+  - A visitor sees a place to search for a country and choose a year.
+  - A visitor sees the life expectancy information that matches their search.
+
+### User input
+  - A visitor types a country and the page shows the life expectancy data for that country.
+  - A visitor clicks a year and the page shows the result for that year.
+
+### Outputs
+  - Country
+  - Year
+  - Life expectancy
+
+
 
 ## Data:
 
