@@ -4,6 +4,7 @@
  A public health researcher or curious person needs an easy way to find life expectancy data for different countries and years because they want to understand how health and longevity differ around the world. My page will let them search for a country and view its life expectancy data by year.
 
 
+
 ## The plan
 
 ![My wireframe](wireframe.png)
