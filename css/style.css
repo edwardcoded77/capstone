@@ -1,32 +1,45 @@
 .card{
     margin: 0 auto;
     width: 800px;
-    /* height: 750px;
-    margin-top: 20px; */
+    background: #171c26;
     transform: translateY(-50px);
+    border-radius: 12px;
 }
 
+
+
 body {
-    background: #111827;
+    background: #0f172a;
 }
 
 
 input,
 select {
     background: #111827;
-    border-radius: 15px;
+    border-radius: 12px;
+    border: 1px solid #273449;
+     color: #f8fafc;
 }
 
 button {
     background: #0ea5e9;
-    border-radius: 15px;
+    border-radius: 12px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0284c7;
+    transform: translateY(-1px);
 }
 
 nav {
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
-    gap: 2rem;
+    gap: 6rem;
     padding: 1rem 0;
 }
 
@@ -34,17 +47,18 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
+    color: #0ea5e9;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    transform: translateY(-2px);
-    color: aliceblue;
+    text-decoration: none;
+    color: #38bdf8;
 }
 
 .btn {
     width: 150px;
-    border-radius: 15px;
+    border-radius: 12px;
 } 
 
 
@@ -56,13 +70,14 @@ nav a:hover {
 #result-card {
     padding: 1.5rem;
     margin-top: 1rem;
-    border-radius: 15px;
+    border-radius: 12px;
     text-align: center;
-    background-color: #6e6e70;
+    background-color: #111827;
+    border: 1px solid #273449;
 }
 
 #result-card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -73,6 +88,7 @@ nav a:hover {
 
 #result-card .life-expectancy {
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 700;
+    color: #38bdf8;
 } 
 

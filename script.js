@@ -1,17 +1,16 @@
+
 let countryBtn = document.getElementById("country");
 let yearBtn = document.getElementById("year");
 let searchBtn = document.getElementById("button-id");
-// let resultsScreen = document.getElementById("results");
 let resultsScreen = document.getElementById("result-card");
 
-let findTimer;
+let Timer;
 
-async function searchLifeExpectancy() {
+async function searchLifeExp() {
     let country = countryBtn.value.trim();
     let year = yearBtn.value;
 
-
-    let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${encodeURIComponent(country)}&year=${year}&limit=100`;
+    let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${country}&year=${year}&limit=100`;
     console.log("Request URL:", requestUrl);
 
     let response = await fetch(requestUrl);
@@ -22,8 +21,77 @@ async function searchLifeExpectancy() {
     let result = data.records.find(record => record.year === year);
     console.log("Matching result:", result);
 
-    
-     // Check if no result was found 
+    // Put this HTML inside result card
+    resultsScreen.innerHTML = `
+    <h3>${result.country}</h3>
+    <p class="year">${result.year}</p>
+    <p class="life-expectancy">
+        Life Expectancy: ${result.life_expectancy} years
+    </p>
+`;
+
+  // Wait 30 seconds, then clear the result
+    clearTimeout(Timer);
+    Timer= setTimeout(function () {
+    location.reload();
+  }, 30000);
+
+}
+
+searchBtn.addEventListener("click", searchLifeExp);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// encodeURIComponent() prepares the user's text so it can safely go into the API URL.
+
+// let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${encodeURIComponent(country)}&year=${year}&limit=100`;
+   // Check if no result was found 
     //  if (!result) 
     //  { resultsScreen.innerHTML = ` <h3>No results found</h3> 
     //  <p>We couldn't find life expectancy information for the selected country and year.</p> 
@@ -37,72 +105,3 @@ async function searchLifeExpectancy() {
 //     <p>Year: ${result.year}</p>
 //     <p>Life expectancy in ${result.year}: ${result.life_expectancy} years</p>
 // `;
-
-    resultsScreen.innerHTML = `
-    <h3>${result.country}</h3>
-    <p class="year">${result.year}</p>
-    <p class="life-expectancy">
-        Life Expectancy: ${result.life_expectancy} years
-    </p>
-`;
-
-  // Wait 30 seconds, then clear the result
-    clearTimeout(findTimer);
-    findTimer= setTimeout(function () {
-    location.reload();
-  }, 30000);
-
-}
-
-searchBtn.addEventListener("click", searchLifeExpectancy);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
