@@ -20,6 +20,7 @@ select {
      color: #f8fafc;
 }
 
+
 button {
     background: #0ea5e9;
     border-radius: 12px;
@@ -28,6 +29,7 @@ button {
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
 }
+
 
 button:hover {
     background: #0284c7;
