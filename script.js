@@ -1,44 +1,57 @@
-
+console.log("Ttesting Javascript");
 let countryBtn = document.getElementById("country");
 let yearBtn = document.getElementById("year");
 let searchBtn = document.getElementById("button-id");
+let countrySearch = document.getElementById("country-search");
 let resultsScreen = document.getElementById("result-card");
 
 let Timer;
 
-async function searchLifeExp() {
-    let country = countryBtn.value.trim();
-    let year = yearBtn.value;
 
-    let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${country}&year=${year}&limit=100`;
-    console.log("Request URL:", requestUrl);
+async function searchCountry() {
+  let typedCountry = countrySearch.value.trim();
+  let dropDownCountry = countryBtn.value;
 
-    let response = await fetch(requestUrl);
-    let data = await response.json();
-     console.log("API data:", data);
-    
-     // Find a record that matches the selected year
-    let result = data.records.find(record => record.year === year);
-    console.log("Matching result:", result);
+  let year = yearBtn.value;
 
-    // Put this HTML inside result card
-    resultsScreen.innerHTML = `
-    <h3>${result.country}</h3>
-    <p class="year">${result.year}</p>
-    <p class="life-expectancy">
-        Life Expectancy: ${result.life_expectancy} years
-    </p>
-`;
+  // choose which country to use 
+  let country = typedCountry || dropDownCountry ;
+  console.log("Country:", country);
+  console.log("Year:", year);
 
-  // Wait 30 seconds, then clear the result
-    clearTimeout(Timer);
-    Timer= setTimeout(function () {
-    location.reload();
-  }, 30000);
+  let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${country}&year=${year}&limit=100`
+  console.log("Request URL:", requestUrl);
+
+  let response = await fetch(requestUrl);
+  let data = await response.json();
+  console.log("Get Data:", data);
+  
+  //  Find the matching country and year
+  let result = data.records.find(record => record.country.toLowerCase() === country.toLowerCase() && record.year === year);
+  console.log("Get records:", result);
+
+
+   // if matching record is not found
+  if (!result){
+    resultsScreen.innerHTML = `<h3>No result found</h3> <p>We couldn't find life expectancy information for ${country} in ${year}
+     </p> <p>Please try another country or year.</p>`;
+
+      return;
+
+  }
+   
+   // if matching is found
+    if (result){
+      resultsScreen.innerHTML = `
+       <h3>${result.country}</h3>
+       <p class="year">${result.year}</p>
+       <p class="life-expectancy"> Average life expectancy: ${result.life_expectancy} years</p> 
+      
+      `}
 
 }
 
-searchBtn.addEventListener("click", searchLifeExp);
+searchBtn.addEventListener("click", searchCountry);
 
 
 
@@ -78,30 +91,110 @@ searchBtn.addEventListener("click", searchLifeExp);
 
 
 
+// let countryBtn = document.getElementById("country");
+// let yearBtn = document.getElementById("year");
+// let searchBtn = document.getElementById("button-id");
+// let countrySearch = document.getElementById("country-search")
+// let resultsScreen = document.getElementById("result-card");
 
+// let Timer;
 
+// async function searchLifeExp() {
+//     let country = countryBtn.value.trim();
+//     let year = yearBtn.value;
 
+//     let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${country}&year=${year}&limit=100`;
+//     console.log("Request URL:", requestUrl);
 
+//     let response = await fetch(requestUrl);
+//     let data = await response.json();
+//      console.log("API data:", data);
+    
+//      // Find a record that matches the selected year
+//     let result = data.records.find(record => record.year === year);
+//     console.log("Matching result:", result);
 
-
-
-
-
-
-// encodeURIComponent() prepares the user's text so it can safely go into the API URL.
-
-// let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${encodeURIComponent(country)}&year=${year}&limit=100`;
-   // Check if no result was found 
-    //  if (!result) 
-    //  { resultsScreen.innerHTML = ` <h3>No results found</h3> 
-    //  <p>We couldn't find life expectancy information for the selected country and year.</p> 
-    //  <p>Please try another country or year.</p> `; return; }
-
-
-   // Put the API info into HTML
+//     // Put this HTML inside result card
 //     resultsScreen.innerHTML = `
-//     <h3>Result</h3>
-//     <p>Country:${result.country}</p>
-//     <p>Year: ${result.year}</p>
-//     <p>Life expectancy in ${result.year}: ${result.life_expectancy} years</p>
+//     <h3>${result.country}</h3>
+//     <p class="year">${result.year}</p>
+//     <p class="life-expectancy">
+//         Life Expectancy: ${result.life_expectancy} years
+//     </p>
 // `;
+
+//   // Wait 30 seconds, then clear the result
+//     clearTimeout(Timer);
+//     Timer= setTimeout(function () {
+//     location.reload();
+//   }, 30000);
+
+// }
+
+// searchBtn.addEventListener("click", searchLifeExp);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // encodeURIComponent() prepares the user's text so it can safely go into the API URL.
+
+// // let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${encodeURIComponent(country)}&year=${year}&limit=100`;
+//    // Check if no result was found 
+//     //  if (!result) 
+//     //  { resultsScreen.innerHTML = ` <h3>No results found</h3> 
+//     //  <p>We couldn't find life expectancy information for the selected country and year.</p> 
+//     //  <p>Please try another country or year.</p> `; return; }
+
+
+//    // Put the API info into HTML
+// //     resultsScreen.innerHTML = `
+// //     <h3>Result</h3>
+// //     <p>Country:${result.country}</p>
+// //     <p>Year: ${result.year}</p>
+// //     <p>Life expectancy in ${result.year}: ${result.life_expectancy} years</p>
+// // `;

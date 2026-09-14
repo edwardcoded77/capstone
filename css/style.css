@@ -21,20 +21,44 @@ select {
 }
 
 
-button {
+/* #button-id{
     background: #0ea5e9;
     border-radius: 12px;
     border: none;
     color: #ffffff;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
-}
+} */
 
 
-button:hover {
+
+/* button:hover {
     background: #0284c7;
     transform: translateY(-1px);
+} */
+
+
+
+/* Search button */
+#button-id {
+  background-color: #087fb9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
+
+#button-id:hover {
+  background-color: #0996d5;
+  transform: translateY(-1px);
+}
+
+#button-id:active {
+  transform: translateY(0);
+}
+
 
 nav {
     display: flex;
@@ -42,6 +66,7 @@ nav {
     align-items: center;
     gap: 6rem;
     padding: 1rem 0;
+    margin-top: -35px;
 }
 
 nav a {
@@ -64,9 +89,12 @@ nav a:hover {
 
 
 
+/* Results  card */
+
 #results {
     margin-top: 2rem;
 }
+
 
 #result-card {
     padding: 1.5rem;
@@ -92,4 +120,12 @@ nav a:hover {
     font-weight: 700;
     color: #38bdf8;
 } 
+
+
+
+
+footer {
+    font-size: 15px;
+    margin-top: 20px;
+}
 

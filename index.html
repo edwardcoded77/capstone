@@ -25,10 +25,10 @@
         <section id="search">
             <h2>Search</h2>
             <p>Search for a country and choose a year to find life expectancy information.</p>
-            <label id="country-lbl">Country</label>
-            
-            <select id="country">
-                <option value="all">All Countries</option>
+            <input type="text" id="country-search" placeholder="Type a country name" aria-label="Enter country name">
+           <small>Type a country or select one from the list.</small>
+            <select id="country"> 
+              <option value="all">All Countries</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -232,9 +232,12 @@
               <option value="Zambia">Zambia</option>
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
+            
+              
 
-            <label id="year-lbl">Year</label>
-           <select id="year"><option value="all">All Years</option>
+             <label for="year">Year</label>
+           <select id="year">
+                <option value="all">All Years</option>
                 <option value="1980">1980</option>
                 <option value="1981">1981</option>
                 <option value="1982">1982</option>
@@ -271,7 +274,7 @@
                 <option value="2013">2013</option>
                 <option value="2014">2014</option>
                 <option value="2015">2015</option>
-              </select>
+              </select> 
            <button class="btn" id="button-id" type="button">Search</button>
         </section>
           
@@ -281,9 +284,12 @@
                 <div id="result-card">
                     <p>Choose a country and year, then click Search.</p>
                 </div>
+                  <footer>
+                        &copy; Gbenga 2026
+                  </footer>
             </section>
-
       </div>
     </main>
+
   </body>
 </html>
