@@ -50,16 +50,13 @@ async function searchCountry() {
       `}
 
 }
-// CLEAR BUTTON
+
+// Clear button
 clearButton.addEventListener("click", () => {
 
-    // Clear typed country
+    // Clear typed buttons
     countrySearch.value = "";
-
-    // Reset country dropdown
     countryBtn.selectedIndex = 0;
-
-    // Reset year dropdown
     yearBtn.selectedIndex = 0;
 
     // Reset results
