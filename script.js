@@ -54,10 +54,10 @@ async function searchCountry() {
 // Clear button
 clearButton.addEventListener("click", () => {
 
-    // Clear typed buttons
+    // Clear buttons
     countrySearch.value = "";
-    countryBtn.selectedIndex = 0;
-    yearBtn.selectedIndex = 0;
+    countryBtn.value = 0;
+    yearBtn.value = 0;
 
     // Reset results
     resultsScreen.innerHTML = `
