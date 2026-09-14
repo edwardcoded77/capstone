@@ -31,7 +31,7 @@ select {
     padding: 14px 32px;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.15s ease;
-    width: 130px;
+    width: 150px;
     
 }
 
@@ -81,7 +81,6 @@ nav a:hover {
     margin-top: 2rem;
 }
 
-
 #result-card {
     padding: 1.5rem;
     margin-top: 1rem;
@@ -113,3 +112,23 @@ footer {
     margin-top: 20px;
 }
 
+.search-icon {
+    position: relative;
+}
+
+.search-icon input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    box-sizing: border-box;
+}
+
+.search-icon i {
+    position: absolute;
+    left: 15px;
+    top: 32%;
+    transform: translateY(-50%);
+  
+    color: #94a3b8;
+    font-size: 16px;
+    pointer-events: none;
+}

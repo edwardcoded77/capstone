@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
   </head>
   <body>
@@ -25,8 +27,12 @@
         <section id="search">
             <h2>Search</h2>
             <p>Search for a country and choose a year to find life expectancy information.</p>
-            <input type="text" id="country-search" placeholder="Type a country name" aria-label="Enter country name">
-           <small>Type a country or select one from the list.</small>
+          <div class="search-icon">
+                <input type="text" id="country-search" placeholder="Type a country name">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <small>Type a country or select one from the list.</small>
+            </div>
+             
             <select id="country"> 
               <option value="all">All Countries</option>
                 <option value="Afghanistan">Afghanistan</option>
