@@ -4,7 +4,7 @@ let yearBtn = document.getElementById("year");
 let searchBtn = document.getElementById("button-id");
 let countrySearch = document.getElementById("country-search");
 let resultsScreen = document.getElementById("result-card");
-
+let clearButton = document.getElementById("clearButton");
 let Timer;
 
 
@@ -50,6 +50,25 @@ async function searchCountry() {
       `}
 
 }
+// CLEAR BUTTON
+clearButton.addEventListener("click", () => {
+
+    // Clear typed country
+    countrySearch.value = "";
+
+    // Reset country dropdown
+    countryBtn.selectedIndex = 0;
+
+    // Reset year dropdown
+    yearBtn.selectedIndex = 0;
+
+    // Reset results
+    resultsScreen.innerHTML = `
+        <h3>Search for a country</h3>
+        <p>Choose a country and year, then click Search.</p> `;
+    console.log("Search cleared");
+});
+
 
 searchBtn.addEventListener("click", searchCountry);
 
@@ -179,22 +198,3 @@ searchBtn.addEventListener("click", searchCountry);
 
 
 
-
-
-// // encodeURIComponent() prepares the user's text so it can safely go into the API URL.
-
-// // let requestUrl = `https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/Global-Life-Expectancy/records?search=${encodeURIComponent(country)}&year=${year}&limit=100`;
-//    // Check if no result was found 
-//     //  if (!result) 
-//     //  { resultsScreen.innerHTML = ` <h3>No results found</h3> 
-//     //  <p>We couldn't find life expectancy information for the selected country and year.</p> 
-//     //  <p>Please try another country or year.</p> `; return; }
-
-
-//    // Put the API info into HTML
-// //     resultsScreen.innerHTML = `
-// //     <h3>Result</h3>
-// //     <p>Country:${result.country}</p>
-// //     <p>Year: ${result.year}</p>
-// //     <p>Life expectancy in ${result.year}: ${result.life_expectancy} years</p>
-// // `;

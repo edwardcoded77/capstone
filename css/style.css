@@ -21,43 +21,38 @@ select {
 }
 
 
-/* #button-id{
-    background: #0ea5e9;
-    border-radius: 12px;
+/* Search and Clear buttons */
+#button-id,
+#clearButton {
+    background-color: #087fb9;
+    color: white;
     border: none;
-    color: #ffffff;
+    border-radius: 8px;
+    padding: 14px 32px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    width: 130px;
+    
+}
+
+/* #button-id,
+#clearButton {
+    width: 150px;
 } */
 
-
-
-/* button:hover {
-    background: #0284c7;
+/* Hover effect for both buttons */
+#button-id:hover,
+#clearButton:hover {
+    background-color: #0996d5;
     transform: translateY(-1px);
-} */
-
-
-
-/* Search button */
-#button-id {
-  background-color: #087fb9;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 14px 32px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-#button-id:hover {
-  background-color: #0996d5;
-  transform: translateY(-1px);
+/* Click effect for both buttons */
+#button-id:active,
+#clearButton:active {
+    transform: translateY(0);
 }
 
-#button-id:active {
-  transform: translateY(0);
-}
 
 
 nav {
@@ -82,10 +77,6 @@ nav a:hover {
     color: #38bdf8;
 }
 
-.btn {
-    width: 150px;
-    border-radius: 12px;
-} 
 
 
 
