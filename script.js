@@ -51,20 +51,20 @@ async function searchCountry() {
 
 }
 
-// Clear button
-clearButton.addEventListener("click", () => {
+// // Clear button
+// clearButton.addEventListener("click", () => {
 
-    // Clear buttons
-    countrySearch.value = "";
-    countryBtn.value = 0;
-    yearBtn.value = 0;
+//     // Clear buttons
+//     countrySearch.value = "";
+//     countryBtn.value = 0;
+//     yearBtn.value = 0;
 
-    // Reset results
-    resultsScreen.innerHTML = `
-        <h3>Search for a country</h3>
-        <p>Choose a country and year, then click Search.</p> `;
-    console.log("Search cleared");
-});
+//     // Reset results
+//     resultsScreen.innerHTML = `
+//         <h3>Search for a country</h3>
+//         <p>Choose a country and year, then click Search.</p> `;
+//     console.log("Search cleared");
+// });
 
 
 searchBtn.addEventListener("click", searchCountry);
