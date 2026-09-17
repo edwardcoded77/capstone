@@ -5,8 +5,10 @@ let searchBtn = document.getElementById("button-id");
 let countrySearch = document.getElementById("country-search");
 let resultsScreen = document.getElementById("result-card");
 let clearButton = document.getElementById("clearButton");
-let Timer;
+let resultpanel = document.getElementById("result-id");
 
+
+let Timer;
 
 async function searchCountry() {
   let typedCountry = countrySearch.value.trim();
@@ -37,8 +39,7 @@ async function searchCountry() {
      </p> <p>Please try another country or year.</p>`;
 
       return;
-
-  }
+ }
    
    // if matching is found
     if (result){
@@ -49,22 +50,34 @@ async function searchCountry() {
       
       `}
 
+   resultpanel.hidden = false;
 }
+   
+// reload the page after 1 minutes
+   
+        clearTimeout(Timer);
 
-// // Clear button
-// clearButton.addEventListener("click", () => {
+        Timer = setTimeout(function () {
+        location.reload();
+        }, 60000); 
+  
 
-//     // Clear buttons
-//     countrySearch.value = "";
-//     countryBtn.value = 0;
-//     yearBtn.value = 0;
 
-//     // Reset results
-//     resultsScreen.innerHTML = `
-//         <h3>Search for a country</h3>
-//         <p>Choose a country and year, then click Search.</p> `;
-//     console.log("Search cleared");
-// });
+ // Clear button
+    clearButton.addEventListener("click", () => {
+
+    // Clear buttons
+    countrySearch.value = "";
+    countryBtn.value = 0;
+    yearBtn.value = 0;
+
+    // Reset results
+    resultsScreen.innerHTML = `
+        <h3>Search for a country</h3>
+        <p>Choose a country and year, then click Search.</p> `;
+    console.log("Search cleared");
+
+});
 
 
 searchBtn.addEventListener("click", searchCountry);

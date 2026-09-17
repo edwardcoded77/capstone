@@ -9,14 +9,32 @@
 
 body {
     background: #0f172a;
+    font-family: "Nunito Sans", sans-serif;
+}
+  
+h1 {
+    font-weight: 800;
+    /* text-shadow: 3px 3px 5px gray; */
+    text-shadow: 2px 2px 4px gray;
+}
+
+
+h2 {
+    font-weight: 700;
 }
 
 
 input,
 select {
     background: #111827;
-    border-radius: 12px;
+   border-radius: 12px;
     border: 1px solid #273449;
+     color: #f8fafc;
+    
+}
+
+
+#country-search::placeholder {
      color: #f8fafc;
 }
 
@@ -27,11 +45,18 @@ select {
     background-color: #087fb9;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 14px 32px;
+    /* padding: 12px 24px; */
+    padding: 12px 10px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+
+    /* Smooth transition for hover effects */
+  /* transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; */
+
     transition: background-color 0.2s ease, transform 0.15s ease;
-    width: 150px;
+    width: 119px;
+   
     
 }
 
@@ -40,12 +65,15 @@ select {
 #clearButton:hover {
     background-color: #0996d5;
     transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(226, 224, 223, 0.4);
+     /* transform: scale(1.08); Scales up the button by 8% */
 }
 
 /* Click effect  */
 #button-id:active,
 #clearButton:active {
     transform: translateY(0);
+   
 }
 
 
@@ -56,7 +84,7 @@ nav {
     align-items: center;
     gap: 6rem;
     padding: 1rem 0;
-    margin-top: -35px;
+    margin-top: -30px;
 }
 
 nav a {
@@ -65,11 +93,15 @@ nav a {
     font-size: 1rem;
     color: #0ea5e9;
     transition: color 0.2s ease;
+    text-shadow: 2px 2px 4px rgb(152, 156, 156);
 }
 
 nav a:hover {
     text-decoration: none;
     color: #38bdf8;
+   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+   transform: scale(1.08);
+  
 }
 
 
@@ -128,7 +160,7 @@ footer {
     top: 32%;
     transform: translateY(-50%);
   
-    color: #94a3b8;
+    color: #dbe1e9;
     font-size: 16px;
     pointer-events: none;
 }
