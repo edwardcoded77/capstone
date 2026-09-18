@@ -20,7 +20,7 @@ h1 {
 
 
 h2 {
-    font-weight: 700;
+    font-weight: 700px;
 }
 
 
@@ -97,7 +97,7 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: #38bdf8;
    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
    transform: scale(1.08);
@@ -164,3 +164,47 @@ footer {
     font-size: 16px;
     pointer-events: none;
 }
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        transform: translateY(-30px);
+    }
+}
+    /* nav {
+        gap: 2rem;
+        padding: 1rem;
+        margin-top: -20px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    #result-card {
+        padding: 1rem;
+    }
+
+    #button-id,
+    #clearButton {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+} */
