@@ -1,7 +1,6 @@
 
 :root{
-  /* --bg::#0c1116; */
-  --bg:#ececf8;
+  --bg::#0c1116;
   --panel:#141b23;
   --panel-2:#10161d;
   --border:#26323d;
@@ -27,8 +26,9 @@ body{
   font-family: var(--font-body);
   color:var(--text);
   background:
-    radial-gradient(1100px 550px at 10% -10%, rgba(207,157,81,.09), transparent 60%),
-    radial-gradient(900px 500px at 100% 0%, rgba(79,179,163,.07), transparent 55%),
+    /* radial-gradient(1100px 550px at 10% -10%, rgba(207,157,81,.09), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(79,179,163,.07), transparent 55%), */
+    radial-gradient(ellipse at top, #12181f 0%, #0c1116 60%);
     var(--bg);
   -webkit-font-smoothing:antialiased;
 }
