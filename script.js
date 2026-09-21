@@ -1,4 +1,4 @@
-console.log("Ttesting Javascript");
+console.log("Testing Javascript");
 let countryBtn = document.getElementById("country");
 let yearBtn = document.getElementById("year");
 let searchBtn = document.getElementById("button-id");
@@ -16,7 +16,7 @@ async function searchCountry() {
 
   let year = yearBtn.value;
 
-  // choose which country to use 
+  // choose either countries 
   let country = typedCountry || dropDownCountry ;
   console.log("Country:", country);
   console.log("Year:", year);
@@ -73,8 +73,8 @@ async function searchCountry() {
 
     // Reset results
     resultsScreen.innerHTML = `
-        <h3>Search for a country</h3>
-        <p>Choose a country and year, then click Search.</p> `;
+    <h3>Search for a country</h3>
+    <p>Choose a country and year, then click Search.</p> `;
     console.log("Search cleared");
 
 });
